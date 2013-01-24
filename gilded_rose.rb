@@ -53,7 +53,8 @@ class GildedRose
       end
     end
     items
-    end
+  end
+  
 
   def maybe_decrease_quality(item)
     name = item.name
@@ -81,25 +82,23 @@ class GildedRose
           item.quality = item.quality - 1
         end
       end
-      
+    end
+  end
 end
-    
-
-
 
 
 #------------------------------------------------------
 class Item
-    attr_accessor :name, :sell_in, :quality
-    
-    def initialize(name, sell_in, quality)
-        @name = name
-        @sell_in = sell_in
-        @quality = quality
-    end   
-        
-    def to_s()
-        "#{@name}, #{@sell_in}, #{@quality}"
-    end
+  attr_accessor :name, :sell_in, :quality
+
+  def initialize(name, sell_in, quality)
+    @name = name
+    @sell_in = sell_in
+    @quality = quality
+  end
+
+  def to_s()
+    "#{@name}, #{@sell_in}, #{@quality}"
+  end
 end
 
